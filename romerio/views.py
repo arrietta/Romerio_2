@@ -70,30 +70,30 @@ class OrderViewSet(viewsets.ModelViewSet):
             if item['molding'] and item["Shape"]['cover_type'] == "Emal": images.append(
                 item['molding']['image'].replace('color', item['molding_color']))
 
-            message = (f"ФИО: {name}"
-                       f"\nНомер: {number}\n"
-                       f"\nДоставка: {translate(delivery)}\n"
-                       f"\nЗамеры: {translate(measurement)}\n"
-                       f"\nДверь:"
-                       f"\nКоллекция: {translate(item['collection']['name'].replace("Shpone_", ""))}"
-                       f"\nТип: {translate(item['Shape']['cover_type'])}"
-                       f"\nФорма: {translate(item['Shape']['name'])}"
-                       f"\nЦвет: {translate(item['color'].replace('_', ' '))}"
-                       f"\nЦвет-вставки: {translate(item['molding_color'].replace('_', ' ')) if item['molding_color'] else ""}"
-                       f"\nНаличник: {translate(item['portal']['name'])}"
+            message = (
+                f"""ФИО: {name}
+                Номер: {number}
+                Доставка: {translate(delivery)}
+                Замеры: {translate(measurement)}
+                Дверь:
+                Коллекция: {translate(item['collection']['name'].replace("Shpone_", ""))}
+                Тип: {translate(item['Shape']['cover_type'])}
+                Форма: {translate(item['Shape']['name'])}
+                Цвет: {translate(item['color'].replace('_', ' '))}
+                Цвет-вставки: {translate(item['molding_color'].replace('_', ' ')) if item.get('molding_color') else ''}
+                Наличник: {translate(item['portal']['name'])}
+                {f"Багет: {translate(item['molding']['name'])}" if item.get('molding') else ''}
+                {f"Фреза: {translate(item['bevel']['name'])}" if item.get('bevel') else ''}
+                {f"Решётка: {translate(item['grid'])}" if item.get('grid') else ''}
+                {f"Фреза решётки: {translate(item['grid_bevel'])}" if item.get('grid_bevel') else ''}
+                {f"Корниз: {translate(item['cornice']['name'])}" if item.get('cornice') else ''}
+                {f"Возвышение: {translate(item['podium']['name'])}" if item.get('podium') else ''}
+                {f"Розетки: {translate(item['socket']['name'])}" if item.get('socket') else ''}
+                {f"Сопожки: {translate(item['boots']['name'])}" if item.get('boots') else ''}
+                Количество: {item['count']}
+                Цена: {item['price']}"""
+            )
 
-                       f"{"\nБагет: " + translate(item['molding']['name']) if item['molding'] else ""}"
-                       f"{"\nФреза: " + translate(item['bevel']['name']) if item['bevel'] else ""}"
-                       f"{"\nРешётка: " + translate(item['grid']) if item['grid'] else ""}"
-                       f"{"\nФреза решётки: " + translate(item['grid_bevel']) if item['grid_bevel'] else ""}"
-                       f"{"\nКорниз: " + translate(item['cornice']['name']) if item['cornice'] else ""}"
-                       f"{"\nВозвышение: " + translate(item['podium']['name']) if item['podium'] else ""}"
-                       f"{"\nРозетки: " + translate(item['socket']['name']) if item['socket'] else ""}"
-                       f"{"\nСопожки: " + translate(item['boots']['name']) if item['boots'] else ""}"
-
-                       f"\nКоличество: {item['count']}"
-                       f"\nЦена: {item['price']}"
-                       f"")
             process_and_send_images(images)
             images.clear()
             send_message_to_bot(message)

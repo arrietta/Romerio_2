@@ -20,9 +20,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "rest_framework",
     "rest_framework.authtoken",
-    "djoser",
     "django_filters",
-    'django_mysql',
     'romerio.apps.RomerioConfig',
     'corsheaders',
 ]
@@ -83,15 +81,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'u2323491_default',      # Replace with your database name
-    #     'USER': 'u2323491_default',            # Replace with your MySQL username
-    #     'PASSWORD': '8CDmu7tXQ38mzrRG',        # Replace with your MySQL password
-    #     'HOST': '37.140.192.43',                # Or your database host
-    #     'PORT': '3306',
-    #     # 'OPTIONS': {'ssl_mode': 'DISABLED'},
-    # }
 }
 
 CACHES = {
