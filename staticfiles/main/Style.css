@@ -1,0 +1,160 @@
+:root{
+    --main-color: #DCDCDC;
+    --gray:#404040;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+html, body {
+    height: 100%;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+    background-color: var(--main-color);
+  }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: Manrope;
+}
+
+.logo{
+  font-family: Playfair Display;
+
+}
+
+::-webkit-scrollbar {
+    width: 6px; 
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #dbdbd6; 
+    /* border-radius: 2px;  */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #aaa5a5; 
+}
+
+section{
+    .card{
+        height: calc(100vh - 80px);
+        background-size: cover;
+    }
+    
+}
+#menu{
+    background-image:url(Menu-Background.png) ;
+    background-size: cover;
+}
+#collection-preview{
+    background-image:url(Door_example.png) ;
+    background-size: cover;
+    background-position: 50%;
+}
+
+
+
+
+#about::before{
+    padding: 0;
+    content: " ";
+    position: absolute;
+    height: calc(100vh - 80px);
+    width: 100%;
+    z-index: -1;
+    background-image:url(image-left.png) ;
+    background-size: cover;
+    background-position: 100%;
+}
+
+#about{
+    background-color: #dcdcdc98;
+}
+
+#work-preview::before{
+    content: " ";
+    position: absolute;
+    height: calc(100vh - 80px);
+    width: 100%;
+    z-index: -1;
+    background-image:url(image.png) ;
+    background-size: cover;
+    background-position: 100%;
+}
+#work-preview{
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,0.0985644257703081) 30%, rgb(29, 29, 29) 100%);
+}
+
+#sizing{
+    background-image: url("Sizing-Background.png");
+}
+#installing{
+    background-image: url("Installing-Background.png");
+}
+#delivery{
+    background-image: url("Delivery-Background.png");
+}
+#salon{
+    background-image: url("Salon-Background.png");
+    background-size: cover;
+}
+
+
+#map::before{
+    padding: 0;
+    content: " ";
+    position: absolute;
+    height: calc(100vh );
+    width: 100%;
+    z-index: -1;
+    background-image:url(map-Background.png) ;
+    background-size: cover;
+    background-position: 100%;
+}
+
+#map{
+    background-color: #dcdcdcb4;
+}
+
+.text-lg-custom{
+    font-size: 32px;
+    line-height: 100%;
+}
+
+.text-l-custom{
+    font-size: 21px;
+    line-height: 125%;
+}
+
+.felidae{
+    font-family: Felidae;
+}
+.bg-main{
+    background-color: var(--main-color);
+}
+.bg-gray-custom{
+    background-color: #686866;
+}
+.bg-blue-custom{
+    background-color: #0c9ce9;
+}
+
+a:hover {
+    color: #525252;
+}
+a:hover path{
+    fill: #525252;
+}
+
+
+

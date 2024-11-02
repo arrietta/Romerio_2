@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Межкомнатные двери в москве</title>
+    <meta name="description" content="Купить межкомнатные двери в Москве. Большой выбор, отличные цены, доставка и установка.">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main/style.css'%}">
+    <link rel="shortcut icon" href="{% static 'Romerio.png'%}" type="image/x-icon">
+    <link href="{% static 'font/Playfair.css'%}" rel="stylesheet">
+    <link href="{% static 'font/felidae.css'%}" rel="stylesheet">
+    <link href="{% static 'font/manrope.css'%}" rel="stylesheet">
+
+    <script src=" {% static 'tailwind.js'%}"></script>
+</head>
+
+<body>
+    <header>
+        <nav class=" px-5 py-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="text-black flex flex-col items-start">
+                    <a href="#" class="logo text-2xl">Romerio</a>
+                    <a href="tel:+89852220108" class="text-gray-500 text-xs">8-(985)-222-01-08</a>
+                </div>
+
+
+                <div class="hidden md:flex space-x-6 items-center pt-1">
+                    <a href="#" class="font-normal text-black ">ГЛАВНАЯ</a>
+                    <a href="{% url 'catalog' %}" class="font-light text-black ">КАТАЛОГ</a>
+                    <a href="{% url 'cart'%}" class="font-light text-black ">КОРЗИНА</a>
+                </div>
+
+
+                <button id="menu-btn" class="focus:outline-none md:hidden">
+                    <svg width="42" height="42" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M6.25 1.5H18.75C21.6495 1.5 24 3.85051 24 6.75V19.25C24 22.1495 21.6495 24.5 18.75 24.5H6.25C3.35051 24.5 1 22.1495 1 19.25V6.75C1 3.85051 3.35051 1.5 6.25 1.5ZM0 6.75C0 3.29822 2.79822 0.5 6.25 0.5H18.75C22.2018 0.5 25 3.29822 25 6.75V19.25C25 22.7018 22.2018 25.5 18.75 25.5H6.25C2.79822 25.5 0 22.7018 0 19.25V6.75ZM6 10H19V8.7H6V10ZM6 13.7918H19V12.4918H6V13.7918ZM19 17.5832H6V16.2832H19V17.5832Z"
+                            fill="black" />
+                    </svg>
+
+                </button>
+
+            </div>
+
+            <div id="mobile-menu" class="md:hidden   overflow-hidden max-h-0 transition-all duration-1000 ease-in-out">
+                <a href="#" class="block text-black pb-1 pt-4 px-1">ГЛАВНАЯ</a>
+                <hr class="border-t-1 border-black">
+                <a href="{% url 'catalog' %}" class="block text-black py-1 px-1">КАТАЛОГ</a>
+                <hr class="border-t-1 border-black">
+                <a href="{% url 'catalog' %}" class="block text-black  py-1 px-1">КОРЗИНА</a>
+            </div>
+        </nav>
+
+        <script>
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuBtn.addEventListener('click', () => {
+                if (mobileMenu.classList.contains('max-h-0')) {
+                    mobileMenu.classList.remove('max-h-0');
+                    mobileMenu.classList.add('max-h-screen');
+                } else {
+                    mobileMenu.classList.remove('max-h-screen');
+                    mobileMenu.classList.add('max-h-0');
+                }
+            });
+            
+        </script>
+        <hr class="border-t-2 border-black">
+    </header>
+    <main>
+        <section class=" grid grid-cols-5 border-b-2 border-black">
+            <div class="card relative border-r-2 border-black col-span-3 flex flex-col justify-center hidden md:flex" id="menu">
+                <div class=" text-lg-custom xl:w-3/5 w-4/5 p-12 ">
+                    <h1 class="py-8">
+                        Подберите себе двери с помощью нашего удобного конструктора
+                    </h1>
+                    <div class="pt-3">
+                        <a href="{% url 'catalog' %}" class="flex pb-3 text-black">В каталог 
+                            <svg class="pt-1 ps-1" width="32" height="32" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_d_2169_60)">
+                                <path d="M5 10.1C4.50294 10.1 4.1 10.5029 4.1 11C4.1 11.4971 4.50294 11.9 5 11.9V10.1ZM21.6364 11.6364C21.9879 11.2849 21.9879 10.7151 21.6364 10.3636L15.9088 4.63604C15.5574 4.28457 14.9875 4.28457 14.636 4.63604C14.2846 4.98751 14.2846 5.55736 14.636 5.90883L19.7272 11L14.636 16.0912C14.2846 16.4426 14.2846 17.0125 14.636 17.364C14.9875 17.7154 15.5574 17.7154 15.9088 17.364L21.6364 11.6364ZM5 11.9L21 11.9V10.1L5 10.1V11.9Z" fill="#0B0B0B"/>
+                                </g>
+                                <defs>
+                                <filter id="filter0_d_2169_60" x="0.0996094" y="0.372559" width="25.8008" height="21.2549" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                <feOffset/>
+                                <feGaussianBlur stdDeviation="2"/>
+                                <feComposite in2="hardAlpha" operator="out"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0.0431373 0 0 0 0 0.0431373 0 0 0 0 0.0431373 0 0 0 0.25 0"/>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2169_60"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2169_60" result="shape"/>
+                                </filter>
+                                </defs>
+                                </svg>
+                        </a>
+                        <a href="#about-head" class="flex text-neutral-700 ">Подробнее <svg class="pt-2 ps-2" width="28" height="32" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 0.0999996C0.502945 0.0999996 0.100001 0.502943 0.100001 1C0.100001 1.49706 0.502945 1.9 1 1.9L1 0.0999996ZM10.3636 13.6364C10.7151 13.9879 11.2849 13.9879 11.6364 13.6364L17.364 7.90883C17.7154 7.55736 17.7154 6.98751 17.364 6.63604C17.0125 6.28457 16.4426 6.28457 16.0912 6.63604L11 11.7272L5.90883 6.63604C5.55736 6.28457 4.98751 6.28457 4.63604 6.63604C4.28457 6.98751 4.28457 7.55736 4.63604 7.90883L10.3636 13.6364ZM1 1.9L10 1.9L10 0.1L1 0.0999996L1 1.9ZM10.1 2L10.1 13L11.9 13L11.9 2L10.1 2ZM10 1.9C10.0552 1.9 10.1 1.94477 10.1 2L11.9 2C11.9 0.950659 11.0493 0.1 10 0.1L10 1.9Z" fill="#404040"/>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                </div>
+                <div class=" absolute p-12 bottom-0 w-full flex text-gray-500 justify-between  items-end">
+                    
+                    <a href="tel:+89852220108">8-(985)-222-01-08</a>
+                    <a href="#">interroom21@mail.ru</a>
+                
+                </div>
+                
+            </div>
+            
+            <div id="collection-preview" class="card md:col-span-2 col-span-5 p-12">
+                <div class="flex flex-col justify-end h-full   text-white leading-tight">
+                    <p class="felidae text-5xl hidden md:block">Classic Collection</p>
+                    <p class="pt-1 pb-4 hidden md:block">Высокое качество: Изготовлена из первоклассных материалов, обеспечивающих долговечность и надежность
+                    </p>
+                    <hr class="border-t-2 rounded hidden md:block">
+                    <div class="pt-5 flex justify-between 2xl:items-center md:items-start items-center 2xl:flex-row flex-col ">
+                        <p class="text-3xl m-2 2xl:m-0 hidden md:block">От 40 653р.</p>
+                        <a href="{% url 'catalog' %}" class="rounded-full border-2 border-white bg-blue-custom py-2 px-4 text-base mb-3 md:mb-0">Перейти в каталог</a>
+                        <a href="#about-head" class="rounded-full border-2 border-white bg-tansparent py-2 px-4 text-base md:hidden">Подробнее</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="grid grid-cols-3 border-b-2 border-black" id="about-head">
+            <div class="relative md:col-span-2 col-span-3">
+                <div class="ps-10 h-20 flex flex-col justify-center text-lg-custom border-b-2 border-r-2 border-black bg-main">
+                    О нас:
+                </div>
+                <div class="card border-r-2 border-black flex flex-col justify-center" id="about">
+                    <div class="text-l-custom w-10/12 mx-auto">
+                        <p >
+                            Компания Romerio занимается продажей межкомнатных дверей. Полотна изготовлены из качественных современных материалов по новейшим технологиям и, благодаря великолепной отделке и продуманному дизайну, способны стать настоящим украшением интерьера.
+                        </p>
+                        <p class="mt-8 md:block hidden">
+                            Убедитесь в этом, придя к нам в салон.  Мы уверены, что Вы найдете именно ту дверь, которую давно искали. А наши продавцы помогут определиться с выбором. Работы по установке дверей выполняют высококвалифицированные специалисты. Нам важно, чтобы покупка в нашем магазине была для Вас приятной и оставила только положительные эмоции. 
+                        
+                        </p>
+                    </div>
+                    
+                </div>
+
+            </div>
+            <div class="relative  col-span-1 hidden md:block" >
+                <div class="ps-11 h-20 flex flex-col justify-center text-lg-custom border-b-2 border-black bg-main">
+                    Наши работы:
+                </div>
+                <div class="card border-r-2 border-black flex flex-col justify-end h-full text-white leading-normal" id="work-preview">
+                    <div class="py-10 2xl:px-12 px-10 ">
+                        <p>Коллекция:</p>
+                        <div class="flex justify-between 2xl:items-center items-start py-2 2xl:flex-row flex-col">
+                            <p class="felidae text-5xl m-2 2xl:m-0">Pantograph </p>
+                            <a href="{% url 'catalog' %}" class="rounded-full border-2 border-white bg-blue-custom py-2 px-4 text-base">Перейти в каталог</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <section class="grid grid-cols-3 border-b-2 border-black">
+            <div class="col-span-3 ps-11 h-20 flex flex-col justify-center text-lg-custom border-b-2 border-black bg-main">
+                Наши услуги:
+            </div>
+            <div class="relative md:col-span-1 col-span-3 card flex flex-col justify-center items-start p-12 md:border-none border-b-2 border-black" id="sizing">
+                <div class="text-lg-custom flex items-center">Замер <img src="{% static 'main/sizing.svg'%}" class="mx-2" width="24" alt=""></div>
+                <p class="pt-3">Замер проемов на вашем объекте. При заказе в нашем магазине  у вас имеется возможность вернуть деньги за данную услугу. </p>
+                <div class="absolute bottom-0 inset-x-0 flex justify-center p-12">
+                    <div class="rounded-full border-y-2 border-s-2 border-black flex items-center bg-tansparent h-14 w-full">
+                        <div class="w-2/5 text-center">1000р.</div>
+                        <a href="tel:+89852220108" class="rounded-full border-2 border-black bg-blue-custom py-2 text-base h-14 leading-9 w-3/5 text-center text-white flex justify-center items-center">Позвонить 
+                            <svg width="26" height="26" class=" h-3" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24.9928 17.9328L19.524 15.589C19.2904 15.4895 19.0308 15.4685 18.7842 15.5293C18.5376 15.59 18.3175 15.7292 18.1569 15.926L15.735 18.8849C11.9341 17.0929 8.87522 14.034 7.08313 10.2331L10.0421 7.81121C10.2392 7.6509 10.3787 7.43073 10.4395 7.18404C10.5003 6.93735 10.4791 6.67757 10.379 6.44403L8.03528 0.975277C7.92547 0.723523 7.73126 0.517975 7.48613 0.394075C7.24101 0.270175 6.96033 0.23569 6.6925 0.296566L1.61438 1.46844C1.35616 1.52807 1.12578 1.67346 0.960833 1.88088C0.795886 2.08831 0.706117 2.34552 0.706177 2.61053C0.706177 15.1349 10.8575 25.2668 23.3624 25.2668C23.6275 25.267 23.8848 25.1772 24.0924 25.0123C24.2999 24.8473 24.4454 24.6169 24.505 24.3586L25.6769 19.2805C25.7374 19.0113 25.7021 18.7295 25.5773 18.4836C25.4524 18.2376 25.2457 18.0428 24.9928 17.9328Z" fill="white"/>
+                                </svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="relative md:col-span-1 col-span-3 card md:border-b-0 md:border-x-2 border-b-2 border-black flex flex-col justify-center items-start p-12" id="installing">
+                <div class="text-lg-custom flex items-center">Установка <img src="{% static 'main/installing.svg'%}" class="mx-2" width="24" alt=""></div>
+                <p class="pt-3">Для полной информации о цене на ваш заказ уточните у квалифицированного дилера. </p>
+                <div class="absolute bottom-0 inset-x-0 flex justify-center p-12">
+                    <div class="rounded-full border-y-2 border-s-2 border-black flex items-center bg-tansparent h-14 w-full">
+                        <div class="w-2/5 text-center">Договорная</div>
+                        <a href="tel:+89852220108" class="rounded-full border-2 border-black bg-blue-custom py-2 text-base h-14 leading-9 w-3/5 text-center text-white flex justify-center items-center">Позвонить 
+                            <svg width="26" height="26" class=" h-3" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24.9928 17.9328L19.524 15.589C19.2904 15.4895 19.0308 15.4685 18.7842 15.5293C18.5376 15.59 18.3175 15.7292 18.1569 15.926L15.735 18.8849C11.9341 17.0929 8.87522 14.034 7.08313 10.2331L10.0421 7.81121C10.2392 7.6509 10.3787 7.43073 10.4395 7.18404C10.5003 6.93735 10.4791 6.67757 10.379 6.44403L8.03528 0.975277C7.92547 0.723523 7.73126 0.517975 7.48613 0.394075C7.24101 0.270175 6.96033 0.23569 6.6925 0.296566L1.61438 1.46844C1.35616 1.52807 1.12578 1.67346 0.960833 1.88088C0.795886 2.08831 0.706117 2.34552 0.706177 2.61053C0.706177 15.1349 10.8575 25.2668 23.3624 25.2668C23.6275 25.267 23.8848 25.1772 24.0924 25.0123C24.2999 24.8473 24.4454 24.6169 24.505 24.3586L25.6769 19.2805C25.7374 19.0113 25.7021 18.7295 25.5773 18.4836C25.4524 18.2376 25.2457 18.0428 24.9928 17.9328Z" fill="white"/>
+                                </svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="relative md:col-span-1  col-span-3  border-black card flex flex-col justify-center items-start p-12" id="delivery">
+                <div class="text-lg-custom flex items-center">Доставка <img src="{% static 'main/delivery.svg'%}" class="mx-2" width="24" alt=""></div>
+                <p class="pt-3">+ 50 ₽/КМ если доставка <br/> за пределы МКАД.</p>
+                <div class="absolute bottom-0 inset-x-0 flex justify-center p-12">
+                    <div class="rounded-full border-y-2 border-s-2 border-black flex items-center bg-tansparent h-14 w-full">
+                        <div class="w-2/5 text-center">2500р.</div>
+                        <a href="tel:+89852220108" class="rounded-full border-2 border-black bg-blue-custom py-2 text-base h-14 leading-9 w-3/5 text-center text-white flex justify-center items-center">Позвонить 
+                            
+                            <svg width="26" height="26" class="h-3" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24.9928 17.9328L19.524 15.589C19.2904 15.4895 19.0308 15.4685 18.7842 15.5293C18.5376 15.59 18.3175 15.7292 18.1569 15.926L15.735 18.8849C11.9341 17.0929 8.87522 14.034 7.08313 10.2331L10.0421 7.81121C10.2392 7.6509 10.3787 7.43073 10.4395 7.18404C10.5003 6.93735 10.4791 6.67757 10.379 6.44403L8.03528 0.975277C7.92547 0.723523 7.73126 0.517975 7.48613 0.394075C7.24101 0.270175 6.96033 0.23569 6.6925 0.296566L1.61438 1.46844C1.35616 1.52807 1.12578 1.67346 0.960833 1.88088C0.795886 2.08831 0.706117 2.34552 0.706177 2.61053C0.706177 15.1349 10.8575 25.2668 23.3624 25.2668C23.6275 25.267 23.8848 25.1772 24.0924 25.0123C24.2999 24.8473 24.4454 24.6169 24.505 24.3586L25.6769 19.2805C25.7374 19.0113 25.7021 18.7295 25.5773 18.4836C25.4524 18.2376 25.2457 18.0428 24.9928 17.9328Z" fill="white"/>
+                                </svg>
+                                
+                        </a>
+                    </div>
+                </div>
+            </div>
+                
+        </section>
+        <section class="grid grid-cols-2 border-b-2 border-black">
+            <div class="relative md:col-span-1 col-span-2 h-screen flex flex-col justify-center items-start border-black md:border-b-0 md:border-r-2 border-b-2" id="salon">
+                <div class=" p-12 text-lg-custom w-2/3">Убедитесь в нашей компитентности у нас в салоне</div>
+                <div class=" absolute p-12 bottom-0 w-full flex justify-between flex-col md:flex-row  md:items-end">
+                    <div  class="md:w-1/3 mb-3 md:mb-0">
+                        <a href="tel:+89852220108" class="mb-2 md:mb-0">8-(985)-222-01-08</a><br>
+                        <a href="#">interroom21@mail.ru</a>
+                    </div>
+                    <div class="md:w-5/12">
+                        Ш. Автомагистраль Москва – Нижний Новгород, вл. 19Bc1, Реутов
+                    </div>
+                    
+                
+                </div>
+            </div>
+            <div class="relative md:col-span-1 col-span-2 h-screen flex flex-col justify-center items-center" id="map">
+                <a href="https://yandex.kz/profile/156271961700?ysclid=lxf2ciyk2911444186" class="text-lg-custom h-14 rounded-full border-2 border-black flex items-center px-8 py-5 pt-6 hover:opacity-80">
+                    <img src="{% static 'main/Yandex-map.png'%}"  alt="">
+                </a>
+                <div class=" absolute p-12 bottom-0 w-full flex justify-between  items-end text-gray-500">
+                    Требуется переход на сторонний сайт.
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="grid md:grid-cols-3 grid-cols-1 p-8">
+        <section class="col-span-1 mb-8 md:mb-0 ">
+          <div class="text-2xl font-semi1bold">Контакты</div>
+          <div class="mt-4">
+            <div class="my-2"><a href="tel:+89852220108">8(985) 222 01-08</a></div>
+            <div class="my-2"><a class="underline">interroom21@mail.ru</a></div>
+            <div>
+              Индивидуальный Предприниматель<br>Вороновская Ольга Витальевна<br>ИНН:
+              772392666702<br>ОГРН: 321508100092737<br>БИК: 044525225<br>Банк
+              ПАО СБЕРБАНК<br>Кор.счет: 30101810400000000225<br>Расчетный
+              счет: 40802810540000162884 <br>Шрифт Felidae разработан Дарьей
+              Казаковой <br>в Школе дизайна НИУ ВШЭ
+            </div>
+            
+          </div>
+        </section>
+        <section class="col-span-1  mb-8 md:mb-0">
+          <div class="text-2xl font-semi1bold">Мы в соц.сетях</div>
+          <div class="mt-4">
+            <div class="text-xl underline font-semi1bold"><a href="https://dzen.ru/interroom">Дзен</a></div>
+            <div class="text-xl underline font-semi1bold"><a href="https://vk.com/interroom21">Вконтакте</a></div>
+            <div class="text-xl underline font-semi1bold"><a href="#">Youtube</a></div>
+          </div>
+        </section>
+        <section class="col-span-1 ">
+          <div class="text-2xl font-semi1bold">Адрес</div>
+          <div class="mt-4">
+            Ш. Автомагистраль Москва – <br>
+            Нижний Новгород, вл. 19Bc1, Реутов
+          </div>
+          <div class="mt-4">
+            <a href="{% url 'privacy' %}">Политика конфиденциальности</a>
+          </div>
+        </section>
+      </footer>
+
+    
+   
+</body>
+
+</html>
